@@ -1,103 +1,86 @@
-# Pyber_Homework
-# Unit 3 | Assignment - Py Me Up, Charlie
+# Unit 5 | Assignment - The Power of Plots
 
 ## Background
 
-Well... you've made it!
+What good is data without a good plot to tell the story?
 
-It's time to put away the Excel sheet and join the big leagues. Welcome to the world of programming with Python. In this homework assignment, you'll be using the concepts you've learned to complete **2** Python Challenges, PyBank and PyPoll.
-Both of these challenges encompasses a real-world situation where your newfound Python scripting skills can come in handy. These challenges are far from easy so expect some hard work ahead!
+So, let's take what you've learned about Python Matplotlib and apply it to some real-world situations. For this assignment, you'll need to complete **1 of 2** Data Challenges. As always, it's your choice which you complete. _Perhaps_, choose the one most relevant to your future career.
 
-### Before You Begin
+## Option 1: Pyber
 
-1. Create a new GitHub repo called `python-challenge`. Then, clone it to your computer.
+![Ride](Images/Ride.png)
 
-2. Inside your local git repository, create a directory for both of the  Python Challenges. Use folder names corresponding to the challenges: **PyBank** and  **PyPoll**.
+The ride sharing bonanza continues! Seeing the success of notable players like Uber and Lyft, you've decided to join a fledgling ride sharing company of your own. In your latest capacity, you'll be acting as Chief Data Strategist for the company. In this role, you'll be expected to offer data-backed guidance on new opportunities for market differentiation.
 
-3. Inside of each folder that you just created, add a new file called `main.py`. This will be the main script to run for each analysis.
+You've since been given access to the company's complete recordset of rides. This contains information about every active driver and historic ride, including details like city, driver count, individual fares, and city type.
 
-4. Push the above changes to GitHub.
+Your objective is to build a [Bubble Plot](https://en.wikipedia.org/wiki/Bubble_chart) that showcases the relationship between four key variables:
 
-## PyBank
+* Average Fare ($) Per City
+* Total Number of Rides Per City
+* Total Number of Drivers Per City
+* City Type (Urban, Suburban, Rural)
 
-![Revenue](Images/revenue-per-lead.jpg)
+In addition, you will be expected to produce the following three pie charts:
 
-* In this challenge, you are tasked with creating a Python script for analyzing the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. (Thankfully, your company has rather lax standards for accounting so the records are simple.)
+* % of Total Fares by City Type
+* % of Total Rides by City Type
+* % of Total Drivers by City Type
 
-* Your task is to create a Python script that analyzes the records to calculate each of the following:
+As final considerations:
 
-  * The total number of months included in the dataset
+* You must use the Pandas Library and the Jupyter Notebook.
+* You must use the Matplotlib library.
+* You must include a written description of three observable trends based on the data.
+* You must use proper labeling of your plots, including aspects like: Plot Titles, Axes Labels, Legend Labels, Wedge Percentages, and Wedge Labels.
+* Remember when making your plots to consider aesthetics!
+  * You must stick to the Pyber color scheme (Gold, SkyBlue, and Coral) in producing your plot and pie charts.
+  * When making your Bubble Plot, experiment with effects like `alpha`, `edgecolor`, and `linewidths`.
+  * When making your Pie Chart, experiment with effects like `shadow`, `startangle`, and `explosion`.
+* See [Starter Workbook](Pyber/pyber_starter.ipynb) for a reference on expected format.
 
-  * The net total amount of "Profit/Losses" over the entire period
+## Option 2: Pymaceuticals Inc
 
-  * The average of the changes in "Profit/Losses" over the entire period
+![Laboratory](Images/Laboratory.jpg)
 
-  * The greatest increase in profits (date and amount) over the entire period
+While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you've since joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, CA. Pymaceuticals specializes in drug-based, anti-cancer pharmaceuticals. In their most recent efforts, they've since begun screening for potential treatments to squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
 
-  * The greatest decrease in losses (date and amount) over the entire period
+As their Chief Data Analyst, you've been given access to the complete data from their most recent animal study. In this study, 250 mice were treated through a variety of drug regimes over the course of 45 days. Their physiological responses were then monitored over the course of that time. Your objective is to analyze the data to show how four treatments (Capomulin, Infubinol, Ketapril, and Placebo) compare.
 
-* As an example, your analysis should look similar to the one below:
+To do this you are tasked with:
 
-  ```text
-  Financial Analysis
-  ----------------------------
-  Total Months: 86
-  Total: $38382578
-  Average  Change: $-2315.12
-  Greatest Increase in Profits: Feb-2012 ($1926159)
-  Greatest Decrease in Profits: Sep-2013 ($-2196167)
-  ```
+* Creating a scatter plot that shows how the tumor volume changes over time for each treatment.
+* Creating a scatter plot that shows how the number of [metastatic](https://en.wikipedia.org/wiki/Metastasis) (cancer spreading) sites changes over time for each treatment.
+* Creating a scatter plot that shows the number of mice still alive through the course of treatment (Survival Rate)
+* Creating a bar graph that compares the total % tumor volume change for each drug across the full 45 days.
 
-* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+As final considerations:
 
-## PyPoll
-
-![Vote-Counting](Images/Vote_counting.jpg)
-
-* In this challenge, you are tasked with helping a small, rural town modernize its vote-counting process. (Up until now, Uncle Cleetus had been trustfully tallying them one-by-one, but unfortunately, his concentration isn't what it used to be.)
-
-* You will be give a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. Your task is to create a Python script that analyzes the votes and calculates each of the following:
-
-  * The total number of votes cast
-
-  * A complete list of candidates who received votes
-
-  * The percentage of votes each candidate won
-
-  * The total number of votes each candidate won
-
-  * The winner of the election based on popular vote.
-
-* As an example, your analysis should look similar to the one below:
-
-  ```text
-  Election Results
-  -------------------------
-  Total Votes: 3521001
-  -------------------------
-  Khan: 63.000% (2218231)
-  Correy: 20.000% (704200)
-  Li: 14.000% (492940)
-  O'Tooley: 3.000% (105630)
-  -------------------------
-  Winner: Khan
-  -------------------------
-  ```
-
-* In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+* You must use the Pandas Library and the Jupyter Notebook.
+* You must use the Matplotlib library.
+* You must include a written description of three observable trends based on the data.
+* You must use proper labeling of your plots, including aspects like: Plot Titles, Axes Labels, Legend Labels, X and Y Axis Limits, etc.
+* Your scatter plots must include [error bars](https://en.wikipedia.org/wiki/Error_bar). This will allow the company to account for variability between mice. You may want to look into [`pandas.DataFrame.sem`](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sem.html) for ideas on how to calculate this.
+* Remember when making your plots to consider aesthetics!
+  * Your legends should not be overlaid on top of any data.
+  * Your bar graph should indicate tumor growth as red and tumor reduction as green.
+    It should also include a label with the percentage change for each bar. You may want to consult this [tutorial](http://composition.al/blog/2015/11/29/a-better-way-to-add-labels-to-bar-charts-with-matplotlib/) for relevant code snippets.
+* See [Starter Workbook](Pymaceuticals/pymaceuticals_starter.ipynb) for a reference on expected format. (Note: For this example, you are not required to match the tables or data frames included. Your only goal is to build the scatter plots and bar graphs. Consider the tables to be potential clues, but feel free to approach this problem, however, you like.)
 
 ## Hints and Considerations
 
-* Consider what we've learned so far. To date, we've learned how to import modules like `csv`; to read and write files in various formats; to store contents in variables, lists, and dictionaries; to iterate through basic data structures; and to debug along the way. Using what we've learned, try to break down you tasks into discrete mini-objectives. This will be a _much_ better course of action than attempting to Google Search for a miracle.
+* Be warned: These are very challenging tasks. Be patient with yourself as you trudge through these problems. They will take time and there is no shame in fumbling along the way. Data visualization is equal parts exploration, equal parts resolution.
 
-* As you will discover, for some of these challenges, the datasets are quite large. This was done purposefully, as it showcases one of the limits of Excel-based analysis. While our first instinct, as data analysts, is often to head straight into Excel, creating scripts in Python can provide us with more robust options for handling "big data".
+* You have been provided a starter notebook. Use the code comments as a **guideline** of steps you may wish to follow as you complete the assignment. You do not have to follow them step-for-step. Do not get bogged down in trying to interpret and accomplish each step.
 
-* Your scripts should work for each dataset provided. Run your script for each dataset separately to make sure that the code works for different data.
+* Between these two exercises, the Pymaceuticals one is significantly more challenging. So choose that one only if you feel somewhat comfortable with the material covered so far. The Pymaceuticals example _will_ require you to research a good bit on your own for hacked solutions to problems you'll experience along the way. If you end up choosing this exercise, feel encouraged to constantly refer to Stack Overflow and the Pandas Documentation. These are needed tools in every data analyst's arsenal.
 
-* Feel encouraged to work in groups, but don't shortchange yourself by copying someone else's work. You get what you put in, and the art of programming is extremely unforgiving to moochers. Dig your heels in, burn the night oil, and learn this while you can! These are skills that will pay dividends in your future career.
+* Don't get bogged down in small details. Always focus on the big picture. If you can't figure out how to get a label to show up correctly, come back to it. Focus on getting the core skeleton of your notebook complete. You can always re-visit old problems.
 
-* Start early, and reach out for help often! Challenge yourself to identify _specific_ questions for your instructors and TAs. Don't resign yourself to simply saying, "I'm totally lost." Come prepared to show your effort and thought patterns, we'll be happy to help along the way.
+* Remember: There are many ways to skin a cat, and similarly there are many ways to approach a data problem. The key throughout, however, is to break up your task into micro tasks. Try answering questions like: "How does my Data Frame need to be structured for me to have the right X and Y axis?" "How do I build a basic scatter plot?" "How do I add a label to that scatter plot?" "Where would the labels for that scatter plot come from?". Again! Don't let the magnitude of a programming task scare you off. Ultimately, every programming problem boils down to a handful of smaller, bite-sized tasks.
 
-* Always commit your work and back it up with GitHub pushes. You don't want to lose hours of your work because you didn't push it to GitHub every half hour or so.
+* Get help when you need it! There is never any shame in asking. But as always, ask a _specific_ question. You'll never get a great answer to: "I'm lost." Good luck!
 
-  * **Commit often**.
+## Copyright
+
+Data Boot Camp © 2018. All Rights Reserved.
